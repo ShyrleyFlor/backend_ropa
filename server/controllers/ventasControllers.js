@@ -10,6 +10,8 @@ async function registrarVentaConProductos(req, res) {
   try {
     const { fecha, precio_total, precio_descuento, productos } = req.body;
 
+    //precio total
+    precio_total = precio_total - precio_descuento;
 
     // Crea la venta
     const venta = await Ventas.create({
