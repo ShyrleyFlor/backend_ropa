@@ -9,7 +9,7 @@ const db = new Sequelize(
   process.env.BD_PASS,
   {
     host: process.env.BD_HOST,
-    port: 3306,
+    port: process.env.BD_PORT,
     dialect: "mysql",
     define: {
       //al crear una tabla en la BD agrega dos columnas del tiempo de creacion y actualizacion
